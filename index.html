@@ -186,13 +186,33 @@ body { overflow-x: hidden; }
   .tile-label { font-size: 11px !important; }
   .tile-icon img { width: 52px !important; height: 52px !important; }
 
-  /* Profile: stack sidebar above content */
-  .prof-body { flex-direction: column !important; }
-  .prof-sidebar-wrap { width: 100% !important; min-width: unset !important; border-right: none !important; border-bottom: 1px solid #ddd; }
-  .prof-sidebar-list { display: flex !important; flex-wrap: wrap !important; }
-  .prof-sidebar-list li { width: 50% !important; border-right: 1px solid #e8e8e8; }
-  .prof-main { width: 100% !important; }
-  .prof-tabs { padding: 10px 12px 0 !important; }
+  /* Profile: keep sidebar on the SIDE, just make it narrower */
+  .prof-body { flex-direction: row !important; }
+  .prof-sidebar-wrap { 
+    width: 110px !important; 
+    min-width: 110px !important; 
+    flex-shrink: 0 !important;
+  }
+  .prof-sidebar-wrap a { 
+    font-size: 10px !important; 
+    padding: 8px 6px !important; 
+    word-break: break-word !important;
+  }
+  .prof-sidebar-wrap .active-item a {
+    padding-left: 4px !important;
+  }
+  .prof-sidebar-wrap img {
+    width: 36px !important;
+    height: 42px !important;
+  }
+  .prof-main { 
+    flex: 1 !important; 
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+  .prof-content { padding: 10px 12px !important; }
+  .prof-tabs { padding: 8px 8px 0 !important; }
+  .prof-tabs div { padding: 5px 10px !important; font-size: 11px !important; }
 }
 </style>
 </head>
